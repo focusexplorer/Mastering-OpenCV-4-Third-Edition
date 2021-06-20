@@ -68,8 +68,10 @@ int main(int argc, char** argv)
     // Detect posibles plate regions
     DetectRegions detectRegions;
     detectRegions.setFilename(filename_whithoutExt);
-    detectRegions.saveRegions = false;
-    detectRegions.showSteps = false;
+//    detectRegions.saveRegions = false;
+    detectRegions.saveRegions = true;
+//    detectRegions.showSteps = false;
+    detectRegions.showSteps = true;
     vector<Plate> posible_regions = detectRegions.run(input_image);
 
     // SVM for each plate region to get valid car plates

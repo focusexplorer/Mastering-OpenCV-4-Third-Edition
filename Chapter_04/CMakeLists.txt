@@ -31,7 +31,7 @@ target_link_libraries(trainOCR ${OpenCV_LIBS})
 add_executable(evalOCR evalOCR.cpp OCR.cpp)
 target_link_libraries(evalOCR ${OpenCV_LIBS})
 
-set(RESOURCES README.md SVM.xml OCR.xml test)
+set(RESOURCES README.md SVM.xml OCR.xml test data/model.pb)
 foreach(f ${RESOURCES})
   file(COPY ${f} DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/)
 endforeach(f)
