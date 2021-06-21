@@ -155,7 +155,7 @@ vector<Plate> DetectRegions::segment(Mat input)
                 Scalar(loDiff, loDiff, loDiff), Scalar(upDiff, upDiff, upDiff), flags);
         }
         if (showSteps)
-            imshow("MASK", mask);
+            imshow("MASK"+std::to_string(i), mask);
         // cv::waitKey(0);
 
         // Check new floodfill mask match for a correct patch.
